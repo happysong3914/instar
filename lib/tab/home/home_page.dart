@@ -5,6 +5,22 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Instagram Clone',
+        ),
+      ),
+      body: Column(
+        children: [
+          Text(
+            'Instagram에 오신 것을 환영합니다',
+          ),
+          Text(
+            'Instagram에 오신 것을 환영합니다',
+          ),
+        ],
+      ),
+    );
   }
 }
