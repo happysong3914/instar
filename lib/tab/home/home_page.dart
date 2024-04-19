@@ -73,8 +73,7 @@ class HomePage extends StatelessWidget {
                           width: 4,
                         ),
                         Image.network(
-                          'https://i.namu.wiki/i/KHZxgx6dilwr4Z7uu6'
-                              'wSPoVlf5aIb6rq6qIOBV2LYBYdN9cWFaLlvkggojNNTD6mrwtGxS_lTPh4Woge2hzuZQ.webp',
+                          'https://cdn.hankyung.com/photo/202401/BF.35541769.1.jpg',
                           width: 70,
                           height: 70,
                           fit: BoxFit.cover,
@@ -83,8 +82,7 @@ class HomePage extends StatelessWidget {
                           width: 4,
                         ),
                         Image.network(
-                          'https://i.namu.wiki/i/KHZxgx6dilwr4Z7uu6'
-                              'wSPoVlf5aIb6rq6qIOBV2LYBYdN9cWFaLlvkggojNNTD6mrwtGxS_lTPh4Woge2hzuZQ.webp',
+                          'https://sisain.co.kr/news/photo/202307/50693_93156_1688658510.jpg',
                           width: 70,
                           height: 70,
                           fit: BoxFit.cover,
