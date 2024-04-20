@@ -1,7 +1,16 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
-class CreatePage extends StatelessWidget {
+class CreatePage extends StatefulWidget {
   const CreatePage({super.key});
+
+  @override
+  State<CreatePage> createState() => _CreatePageState();
+}
+
+class _CreatePageState extends State<CreatePage> {
+  File? _image;
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +19,9 @@ class CreatePage extends StatelessWidget {
         title: Text('새 게시물'),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              // 이미지 피커 실행
+            },
             icon: Icon(Icons.send),
           ),
         ],
@@ -35,6 +46,7 @@ class CreatePage extends StatelessWidget {
                 onPressed: () async {},
                 child: const Text('이미지 선택'),
               ),
+              if (_image != null)
               Image.network(
                 'https://cdn.hankyung.com/photo/202401/BF.35541769.1.jpg',
                 width: 300,
