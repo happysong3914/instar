@@ -2,6 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 
+import 'create_model.dart';
+
 class CreatePage extends StatefulWidget {
   const CreatePage({super.key});
 
@@ -10,6 +12,8 @@ class CreatePage extends StatefulWidget {
 }
 
 class _CreatePageState extends State<CreatePage> {
+  final model = CreateModel();
+
   File? _image;
 
   @override
@@ -19,7 +23,7 @@ class _CreatePageState extends State<CreatePage> {
         title: Text('새 게시물'),
         actions: [
           IconButton(
-            onPressed: () {
+            onPressed: () async {
               // 이미지 피커 실행
             },
             icon: Icon(Icons.send),
@@ -43,14 +47,18 @@ class _CreatePageState extends State<CreatePage> {
               ),
               const SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () async {},
+                onPressed: () async {
+                  _image = await model.getImage();
+
+                  setState(() {});
+                },
                 child: const Text('이미지 선택'),
               ),
               if (_image != null)
-              Image.network(
-                'https://cdn.hankyung.com/photo/202401/BF.35541769.1.jpg',
-                width: 300,
-              ),
+                Image.file(
+                  _image!,
+                  width: 300,
+                ),
             ],
           ),
         ),
